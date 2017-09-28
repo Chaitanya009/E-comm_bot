@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Daily Visits</h3>
+        <div class="col-12">
+          <div>
+            <canvas baseChart height="105" [datasets]="barChartData" 
+            [labels]="barChartLabels" 
+            [options]="barChartOptions" 
+            [legend]="barChartLegend" 
+            [chartType]="barChartType" 
+            [colors]="lineChartColors"
+            (chartHover)="chartHovered($event)" 
+            (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Column -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="flex-row text-center">
+              <div class="m-l-10 align-self-center">
+                <h2 class="m-b-0 font-light">3249</h2>
+                <h4 class="text-muted m-b-0">Active User</h4></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="flex-row text-center">
+              <div class="m-l-10 align-self-center">
+                <h2 class="m-b-0 font-light">2769</h2>
+                <h4 class="text-muted m-b-0">Product Hits</h4></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="flex-row text-center">
+              <div class="m-l-10 align-self-center">
+                <h2 class="m-b-0 font-light">4059</h2>
+                <h4 class="text-muted m-b-0">Total Users</h4></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Column -->
+  </div>
+</div>

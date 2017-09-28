@@ -1,0 +1,83 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body"> 
+        <div class="row">
+        <div class="col-md-3 m-t-5">
+        <h4 class="card-title">{{title}}</h4>
+        </div>
+        <div class="col-md-2 m-b-20">
+        <button type="button" class="btn btn-info btn-rounded" data-toggle="modal" data-target="#add-contact">Add New Coupon</button></div>
+        <div class="col-md-2 m-b-20 m-l-10">
+        <button type="button" class="btn btn-info btn-rounded" data-toggle="modal" data-target="#add-contact">Import Coupon</button></div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-bordered" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="5">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Coupon Code</th>
+                <th>Added on</th>
+                <th class="text-nowrap">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of mf.data">
+                <td>{{item.number}}</td>
+                <td>{{item.code}}</td>
+                <td>{{item.date}}</td>
+                <td class="text-nowrap">
+                  <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                  <a href="#" data-toggle="tooltip" data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a>
+                </td>
+              </tr>
+              <!-- <tr>
+                <td>1</td>
+                <td>SFVD54Y</td>
+                <td>May 15, 2015</td>
+                <td class="text-nowrap">
+                  <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                  <a href="#" data-toggle="tooltip" data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>FVE433G</td>
+                <td>July 1, 2015</td>
+                <td class="text-nowrap">
+                  <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                  <a href="#" data-toggle="tooltip" data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>SWFV3F</td>
+                <td>Apr 12, 2015</td>
+                <td class="text-nowrap">
+                  <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                  <a href="#" data-toggle="tooltip" data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>EFYJ3T</td>
+                <td>Aug 9, 2015</td>
+                <td class="text-nowrap">
+                  <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                  <a href="#" data-toggle="tooltip" data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a>
+                </td>
+              </tr> -->
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4">
+                  <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
