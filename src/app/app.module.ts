@@ -12,6 +12,7 @@ import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
 import { RightSidebarComponent } from './shared/right-sidebar/rightsidebar.component';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
+import { FileUploadModule } from "ng2-file-upload";
 
 //Facebook imports
 import { FacebookModule } from 'ngx-facebook';
@@ -96,7 +97,8 @@ const routes: Routes = [
     FormsModule,
     HttpModule,
     RouterModule.forRoot(routes),
-    FacebookModule.forRoot()
+    FacebookModule.forRoot(),
+    FileUploadModule
   ],
   providers: [],
   bootstrap: [AppComponent]
